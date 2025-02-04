@@ -1,10 +1,12 @@
 import mongoose from "mongoose";
-const Mongo_URI ="mongodb+srv://student:student123@studentsclustor.xh6ao.mongodb.net/studentDB?retryWrites=true&w=majority&appName=Studentsclustor"
-const dbConnect =()=>{
-    mongoose.connect(Mongo_URI)
-    .then(()=>{
-        console.log("mongodb successfully connected");
+
+const dbConnect = async () =>{
+    try {
+        await mongoose.connect(process.env.MONGODB_URL)
+    } catch (error) {
+        console.log(error);
         
-    })
+    }
 }
+
 export default dbConnect
