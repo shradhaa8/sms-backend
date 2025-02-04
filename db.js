@@ -7,10 +7,9 @@ const dbConnect = async () => {
     if (!uri) {
       throw new Error('MONGODB_URL is not defined in environment variables');
     }
+
     await mongoose.connect(uri, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      serverSelectionTimeoutMS: 5000,
+      serverSelectionTimeoutMS: 5000, 
     });
 
     console.log('MongoDB connected successfully');
