@@ -13,7 +13,7 @@ const port = 5000
 dbConnect()
 app.use(express.json())
 app.use(cors({
-    origin:"http://localhost:5173",
+    origin:"https://sms-frontend-indol.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"]
 }))
 app.use(express.static('public/uploads'))
