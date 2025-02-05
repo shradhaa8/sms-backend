@@ -3,7 +3,7 @@ import Student from "../model/Student.js";
 import User from "../model/User.js";
 import bcrypt from "bcrypt";
 import path from "path"; 
-import { error } from "console";
+import { error, log } from "console";
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -20,7 +20,8 @@ const addStudent = async (req, res) => {
   try {
    
     const { s_name, email, age, course_enrolled, password } = req.body; 
-
+    console.log(req.body);
+    
    
     const user = await User.findOne({ email });
     if (user) {

@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const dbConnect = async () => {
   try {
-    const uri = "mongodb+srv://student:student123@studentsclustor.xh6ao.mongodb.net/studentDB?retryWrites=true&w=majority&appName=Studentsclustor";
+    const uri = "process.env.MONGODB_URL";
 
     if (!uri) {
       throw new Error('MONGODB_URL is not defined in environment variables');

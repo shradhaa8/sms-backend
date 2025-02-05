@@ -7,7 +7,6 @@ import studentRouter from './routes/student.js'
 import dashboardRouter from './routes/dashboard.js'
 
 
-
 const port = 5000
 
 dbConnect()
