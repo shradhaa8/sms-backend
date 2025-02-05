@@ -5,7 +5,8 @@ const app = express()
 import authRouter from './routes/Auth.js'
 import studentRouter from './routes/student.js'
 import dashboardRouter from './routes/dashboard.js'
-
+import dotenv from 'dotenv'
+dotenv.config()
 
 const port = process.env.port
 
